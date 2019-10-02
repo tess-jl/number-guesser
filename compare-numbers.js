@@ -3,12 +3,14 @@
 
 
 const compareNumbers = (guess, correctNumber) => {
-    if (guess === correctNumber) {
-        return 0;
+    if (guess > 10 || guess < 0) {
+        return 'number is out of range';
     } else if (guess > correctNumber) {
         return 1;
     } else if (guess < correctNumber) {
         return -1;
+    } else if (guess === correctNumber) {
+        return 0;
     }
 };
 

@@ -6,6 +6,24 @@ const test = QUnit.test;
 
 //assuming input is always a valid number!
 
+//stretch goal: testing if it is an actual number between 1 and 10 
+
+test('should return invalid because input is out of range', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const guess = 20;
+    const correctNumber = 2;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const result = compareNumbers(guess, correctNumber);
+    const expected = 'number is out of range';
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(result, expected);
+});
+
 
 
 test('user guesses the correct number', function(assert) {

@@ -46,4 +46,5 @@ button {
 input {
     width: 100px;
     background-color: rgb(255, 255, 255);
+    text-align: center;
 }

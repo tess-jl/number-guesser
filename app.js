@@ -9,14 +9,12 @@ const numberOfTooLow = document.getElementById('number-too-low');
 const gameResult = document.getElementById('game-result');
 const reveal = document.getElementById('reveal');
 
-
-// const actualNumber = 2;
-
+//producing random number that will serve as the correct guess
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 let actualNumber = getRandomInt(11);
-console.log(actualNumber, 'actual number');
+console.log(actualNumber, 'correct guess');
 
 numberOfTries.textContent = 5;
 numberOfTooHigh.textContent = 0;
@@ -54,10 +52,13 @@ runTestButton.addEventListener('click', () => {
         numberOfTooLow.textContent = tooLows;
         gameResult.textContent = 'you lost';
         return 'your guess is too low';
-    } else {
+    } else if (comparison === 0) {
         gameResult.textContent = 'YOU WON';
         runTestButton.disabled = true;
         reveal.classList.remove('hidden');
         return 'your guess is correct!';
+    } else if (comparison === 'number is out of range') {
+        gameResult.textContent = 'the numner you entered is out of range';
+        reveal.classList.remove('hidden');
     }
 });
