@@ -1,5 +1,6 @@
-//compare userGuess number with the correct number
-//has 2 parameters guess and correctNumber, returns either 0 (number guessed is identical), 1 (number guessed is too high), -1 (number guessed is too low)
+//compare user's guessed number with the correct number, returns 0 if numbers are identical, 1 if guessed number is too high, and -1 if guessed number is too low
+//function needs two parameters
+
 
 const compareNumbers = (guess, correctNumber) => {
     if (guess === correctNumber) {
