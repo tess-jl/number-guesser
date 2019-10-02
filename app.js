@@ -10,7 +10,13 @@ const gameResult = document.getElementById('game-result');
 const reveal = document.getElementById('reveal');
 
 
-const actualNumber = 2;
+// const actualNumber = 2;
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+let actualNumber = getRandomInt(11);
+console.log(actualNumber, 'actual number');
 
 numberOfTries.textContent = 5;
 numberOfTooHigh.textContent = 0;

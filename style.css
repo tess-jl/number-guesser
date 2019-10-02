@@ -37,3 +37,13 @@ main {
 .tracking {
     font-family: 'Courier New', Courier, monospace;
 }
+
+button {
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+}
+
+input {
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+}
