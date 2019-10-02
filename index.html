@@ -12,20 +12,20 @@
 <body>
     <title>Number Guesser Game!</title>
     <h1>Number Guesser Game!</h1>
-    <header>User's job is to guess the number by:</header>
+    <header>To play the game:</header>
         <ol>
-            <li>step 1</li>
-            <li>step 2</li>
-            <li>step 3</li>
+            <li>Consider numbers between 1 and 10</li>
+            <li>Input your guess for which number is correct</li>
+            <li>You can only guess 5 times, so consider the number of guesses too high or too low to help you improve your chances of winning</li>
         </ol>
     <input id="number-guess">
     <button id="run-test">Submit my guessed number!</button>
 
-    <p>Number of tries remaining: <span id="number-of-tries"></span> out of 5
-    Number of tries too high: <span></span>
-    Number of tried too low:<span></span></p>
+    <p>Number of guesses remaining: <span id="number-of-tries"></span> out of 5 </p>
+    <p>Number of guesses too high: <span id="number-too-high"></span></p>
+    <p>Number of guesses too low:<span id="number-too-low"></span></p>
 
-    <footer>Game result: </footer>
+    <footer class="hidden" id="reveal">Game result: <span id="game-result"></span></footer>
 
     <script type="module" src="app.js"></script>
 </body>

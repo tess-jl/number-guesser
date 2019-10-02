@@ -4,33 +4,55 @@ import compareNumbers from './compare-numbers.js';
 const runTestButton = document.getElementById('run-test');
 let userGuess = document.getElementById('number-guess');
 const numberOfTries = document.getElementById('number-of-tries');
+const numberOfTooHigh = document.getElementById('number-too-high');
+const numberOfTooLow = document.getElementById('number-too-low');
+const gameResult = document.getElementById('game-result');
+const endMessage = document.querySelector('hidden');
+const reveal = document.getElementById('reveal');
 
 
 const actualNumber = 2;
 
 numberOfTries.textContent = 5;
+numberOfTooHigh.textContent = 0;
+numberOfTooLow.textContent = 0;
+gameResult.textContent = ' ';
+
 let iterations = 5;
+let tooHighs = 0;
+let tooLows = 0;
+
 
 //event-handler function for the DOM elements
-
 runTestButton.addEventListener('click', () => {
     //convert string of the number to a number data type
     const numberUserGuess = parseInt(userGuess.value, 10); 
-    console.log(numberUserGuess); 
+    console.log(numberUserGuess); // logging the number the user guessed
 
     const comparison = compareNumbers(numberUserGuess, actualNumber);
 
-    iterations = iterations - 1;
-    numberOfTries.textContent = iterations; // DOM is responding to chnage in number of iterations to show the user that iterations has changed
+    iterations = iterations - 1; // to log number of tries
+    numberOfTries.textContent = iterations;
 
-    if (comparison === 1) {
-        console.log('logged same number');
-        return 'your guess is too high!';
-    } else if (comparison === -1) {
-        return 'your guess is too low';
-    } else {
-        return 'your guess is correct!';
+    if (iterations <= 0) { // to stop the game after 5 tries
+        runTestButton.disabled = true;
+        reveal.classList.remove('hidden');
     }
 
-
+    if (comparison === 1) {
+        tooHighs = tooHighs + 1;
+        numberOfTooHigh.textContent = tooHighs;
+        gameResult.textContent = 'you lost';
+        return 'too high';
+    } else if (comparison === -1) {
+        tooLows = tooLows + 1;
+        numberOfTooLow.textContent = tooLows;
+        gameResult.textContent = 'you lost';
+        return 'your guess is too low';
+    } else {
+        gameResult.textContent = 'YOU WON';
+        runTestButton.disabled = true;
+        reveal.classList.remove('hidden');
+        return 'your guess is correct!';
+    }
 });
