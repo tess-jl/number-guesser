@@ -7,7 +7,6 @@ const numberOfTries = document.getElementById('number-of-tries');
 const numberOfTooHigh = document.getElementById('number-too-high');
 const numberOfTooLow = document.getElementById('number-too-low');
 const gameResult = document.getElementById('game-result');
-const endMessage = document.querySelector('hidden');
 const reveal = document.getElementById('reveal');
 
 

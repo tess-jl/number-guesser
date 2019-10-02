@@ -10,24 +10,28 @@
 </head>
 
 <body>
-    <title>Number Guesser Game!</title>
-    <h1>Number Guesser Game!</h1>
-    <header>To play the game:</header>
-        <ol>
-            <li>Consider numbers between 1 and 10</li>
-            <li>Input your guess for which number is correct</li>
-            <li>You can only guess 5 times, so consider the number of guesses too high or too low to help you improve your chances of winning</li>
-        </ol>
-    <input id="number-guess">
-    <button id="run-test">Submit my guessed number!</button>
+    <main>
+        <title>Number Guesser Game!</title>
+        <h1>Number Guesser Game!</h1>
+        <header>To play the game:</header>
+            <ol>
+                <li class="list">Consider numbers between 1 and 10</li>
+                <li class="list">Input your guess for which number is correct</li>
+                <li class="list">You can only guess 5 times, so consider the number of guesses too high or too low to help you improve your chances of winning</li>
+            </ol>
+        <input id="number-guess">
+        <button id="run-test">Submit my guessed number!</button>
 
-    <p>Number of guesses remaining: <span id="number-of-tries"></span> out of 5 </p>
-    <p>Number of guesses too high: <span id="number-too-high"></span></p>
-    <p>Number of guesses too low:<span id="number-too-low"></span></p>
+        <section class="tracking">
+            <p>Number of guesses remaining: <span id="number-of-tries"></span> out of 5 </p>
+            <p>Number of guesses too high: <span id="number-too-high"></span></p>
+            <p>Number of guesses too low: <span id="number-too-low"></span></p>
+        </section>
 
-    <footer class="hidden" id="reveal">Game result: <span id="game-result"></span></footer>
+        <footer class="hidden" id="reveal">Game result: <span id="game-result"></span></footer>
 
-    <script type="module" src="app.js"></script>
+        <script type="module" src="app.js"></script>
+    </main>
 </body>
 
 </html>
