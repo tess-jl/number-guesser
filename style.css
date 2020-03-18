@@ -1,0 +1,50 @@
+.hidden {
+    visibility: hidden;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+#reveal {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(180, 218, 216);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.list {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+    width: 600px;
+}
+
+.tracking {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+}
+
+input {
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
